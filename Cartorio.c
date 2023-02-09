@@ -143,6 +143,7 @@ int main() //função principal da aplicação
 		printf("\t 1- Registrar Nomes\n");
 		printf("\t 2- Consultar Nomes\n");
 		printf("\t 3- Deletar Nomes\n");
+		printf("\t4 - Sair do sistema\n");
 		printf("Opção: "); //fim do menu
 	
 	
@@ -160,6 +161,11 @@ int main() //função principal da aplicação
 				
 			case 3:
 				deletar();
+				break;
+				
+			case 4:
+				printf("Obrigado por utilizar o sistema\n");
+				return 0;
 				break;
 				
 			
