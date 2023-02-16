@@ -1,0 +1,41 @@
+INT MAIN
+	100% CORRETA
+	inicia e encerra conforme o esperado
+
+	REGISTRO()
+		inicia e encerra na mesma função
+		100% correta
+	CONSULTA()
+		inicia e encerra na mesma função
+		100% correta
+	DELETAR()
+		inicia e encerra na mesma função
+		100% correta
+
+
+login
+100% correto
+
+cenário de teste: 1234
+
+inserir:
+	Menu funcionando corretamente
+	criou o arquivo
+	cpf, nome sobrenome e cargo
+	retorno ao menu após a execução: ok
+
+consultar:
+	Menu funcionando corretamente
+	consulta a cpf inexistente: ok
+	consulta a cpf existente: ok
+	retorno ao menu após a execução: ok
+deletar:
+	Menu funcionando corretamente
+	deleção de usuário : ok
+	mensagem ao não encontrart usuário: ok
+	retorno ao menu após a execução: ok
+
+Após análise do software, certifico que o projeto registro de nomes da Ebac, garante a entrega das premissas previstas pelo cliente.
+
+
+		

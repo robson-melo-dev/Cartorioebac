@@ -128,54 +128,78 @@ int deletar(){//função para executar a deleção de nomes
 
 int main() //função principal da aplicação
 {
+	
+	setlocale (LC_ALL, "Portuguese_Brazil.1252"); //definição da linguagem de saída
+	system("cls"); //Limpeza da tela
 	//definição e inicialização de variáveis
 	int opcao = 0;
 	int laco=1;
+	char senhadigitada[10] = "a";
+	int senhacorreta = 0;
 	
-	for(laco=1; laco=1;)
+	printf("==================================================CARTÓRIO DA EBAC==================================================\n\n");
+	printf("\nLogin de administrador! \n\nDigite sua senha:");
+	scanf("%s", senhadigitada);
+	
+	senhacorreta = strcmp(senhadigitada, "admin");
+	
+	if(senhacorreta == 0)
 	{
-		setlocale (LC_ALL, "Portuguese_Brazil.1252"); //definição da linguagem de saída
-		system("cls"); //Limpeza da tela
 	
 	
-		printf("==================================================CARTÓRIO DA EBAC==================================================\n\n");//início do menu
-		printf("Escolha a opção desejada:\n\n");
-		printf("\t 1- Registrar Nomes\n");
-		printf("\t 2- Consultar Nomes\n");
-		printf("\t 3- Deletar Nomes\n");
-		printf("\t4 - Sair do sistema\n");
-		printf("Opção: "); //fim do menu
-	
-	
-		scanf("%d", &opcao);//Entrada do usuário "%d" se refere à variável do tipo interiro
 
-		switch(opcao) //início da seleção do menu
+		for(laco=1; laco=1;)
 		{
-			case 1:
-				registro();	//chamada de função			
-				break;
+			setlocale (LC_ALL, "Portuguese_Brazil.1252"); //definição da linguagem de saída
+			system("cls"); //Limpeza da tela
+	
+	
+			printf("==================================================CARTÓRIO DA EBAC==================================================\n\n");//início do menu
+			printf("Escolha a opção desejada:\n\n");
+			printf("\t 1- Registrar Nomes\n");
+			printf("\t 2- Consultar Nomes\n");
+			printf("\t 3- Deletar Nomes\n");
+			printf("\n\t 4- Sair do sistema\n");
+			printf("Opção: "); //fim do menu
+	
+	
+			scanf("%d", &opcao);//Entrada do usuário "%d" se refere à variável do tipo interiro
+
+			switch(opcao) //início da seleção do menu
+			{
+				case 1:
+					registro();	//chamada de função			
+					break;
 				
-			case 2:
-				consulta();
-				break;
+				case 2:
+					consulta();
+					break;
 				
-			case 3:
-				deletar();
-				break;
+				case 3:
+					deletar();
+					break;
 				
-			case 4:
-				printf("Obrigado por utilizar o sistema\n");
-				return 0;
-				break;
+				case 4:
+					system("cls");
+					printf("\nObrigado por utilizar o sistema\n");
+					return 0;
+					break;
 				
 			
-			default:
-				printf("Esta opção é inválida!\n"); //mensagem padrão caso a opção entrada não seja nehum dos cases
-				system("pause");
-				break;
-		}//fim da deleção do menu
+				default:
+					printf("\n\tEsta opção é inválida!\n"); //mensagem padrão caso a opção entrada não seja nehum dos cases
+					system("pause");
+					break;
+			}//fim da deleção do menu
+		
+		}
+	}
+	else
+		printf("Senha incorreta!\n");
 	
-	}	
+	
+
+		
 	
 }
 
